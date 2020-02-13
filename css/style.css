@@ -1,0 +1,95 @@
+:root
+{
+  --color-almostblack: #181818;
+  --color-pale: #d9d9d0;
+  --color-accent: #08a;
+  --color-accent-up: #1ac;
+}
+
+body { font-family: 'SourceSansPro_Regular'; background-color: var(--color-almostblack); margin: 0px; padding: 0px; transition: opacity 150ms; opacity: 1 !important; color: var(--color-pale); }
+a { text-decoration: none; cursor: pointer; color: var(--color-pale); }
+a:hover { color: white; }
+
+.logo { display: inline-block; width: 64px; height: 64px; top: 40px; left: 40px; background-image: url("../images/tapsheet128.png"); background-size:cover; background-position: -1800px; }
+
+#view { min-height: 100%; position: relative; transition: all 250ms; }
+
+#welcome { background-color: rgba(0, 0, 0, 0.8); border-radius: 10px; position:absolute; top: 50%; left: 50%; width:600px; height:50px; margin-top: -150px; margin-left: -300px; text-align: center; }
+#sense { display: block; z-index: -100; position: absolute; width: 100%; height: 100%; top: 0; right: 0; bottom: 0; left: 0; background-size: cover; background-position: center center; background-repeat: no-repeat; }
+
+#header { display: block; position: relative; width: 100%; min-height: 144px; }
+#header #photo { display: block; position: relative; width:100%; height: 50vh; max-height: 1080px; transition: all 150ms; }
+
+#header #menu { display: flex; flex-flow: row wrap; align-items: flex-start; position: fixed; width: 100%; top: 0px; right: 0px; padding: 40px 40px 40px 32px; text-align: right; float: right; }
+#header #menu.sticky { position: absolute; top: initial; bottom: 4px; }
+#header #menu #logo { display: inline-block; margin-right: auto; width: 64px; height: 64px; background-image: url("../images/tapsheet128.png"); background-size:cover; z-index: 200; animation: sprite 4s steps(99) infinite; }
+#header #menu .item { flex: 0 1 auto; margin-left: 40px; display: block; float: right; }
+#header #menu form { flex: 0 1 auto; background-color: white; padding: 4px; border-radius: 6px; }
+#header #menu form .email { display: inline-block; font-size: 12px; color: black; line-height: 20px; margin-left: 4px; }
+#header #menu form .button { display: inline-block; font-size: 12px; color: white; position: relative; background-color: var(--color-almostblack); line-height: 20px; padding: 0 10px; border-radius: 4px; }
+#header #menu form .button:hover { background: var(--color-accent-up); cursor: pointer; transition: 100ms; }
+#header #breadcrumb { position: absolute; left: 40px; bottom: 20px; }
+
+#content { width: 100%; padding: 40px 40px 110px 40px; }
+#content h3 { margin-bottom: 10px; }
+#content a { font-weight: bold; }
+#content #presentation { margin: 0 240px; transition: all 250ms; }
+#content #presentation a { color: var(--color-accent); }
+#content #presentation a:hover { color: var(--color-accent-up); }
+#content #presentation #projects { display: flex; width: 100%; height: 100%; flex-flow: row wrap; }
+#content #presentation #projects h2 { flex: 1 0 100%; margin-bottom: 20px; }
+#content #presentation .gif { width: 100%; height: auto; }
+
+#content a.card { flex: 0 0 250px; width: 250px; height: 200px; position: relative; margin: 0px 10px 10px 0; transition: all 250ms; overflow: hidden; }
+#content .card .title { display: block; position: absolute; bottom: 0px; width: 100%; text-align: left; padding: 10px; color: white; font-family: sans-serif; line-height: 20px; font-size: 20px; line-height: 30px; font-weight: 700; letter-spacing: 2px; }
+#content .card .flag { position: relative; width: 35px; height: 35px; position: relative; top: 3px; left: 3px; float: top; float: left; }
+#content .card .flag.github { background-image: url("../svg/github.svg"); }
+#content .card .flag.unity { background-image: url("../svg/unity.svg"); }
+
+#content p { line-height: 1.3em; font-size: 1.4em; display: block; margin-bottom: 20px; }
+#content ul { display: block; position: relative; margin: 0px 0px 20px 0px; padding-left:30px; }
+#content ul li { display: list-item; line-height: 1.3em; font-size: 1.4em; position: relative; list-style: circle; }
+
+#sidebar { display: block; float: left; width: 200px; height: 100%; padding: 0 0 20px 0; overflow-x: hidden; }
+#sidebar .storebutton{ display: inline-block; color: white; background-color: var(--color-accent); padding: 6px; line-height: 20px; margin-bottom: 4px; }
+#sidebar .storebutton:hover{ background-color: var(--color-accent-up); transition: 100ms; }
+
+#footer { display: block; position: absolute; bottom: 0px; width: 100%; padding: 0px 40px; }
+#footerwrap { display: inline-block; width: 100%; padding: 40px 0px; margin: 0px; max-width: 100%; font-size: 20px; color: #fff; }
+#footerwrap .logo { width: 30px; height: 30px; margin: none; float: left; }
+#footerwrap .credit { display: inline-block; font-size: 14px; }
+#footerwrap a.icon         { width: 20px; height: 30px; margin: 0px 8px; background-size: contain; background-repeat: no-repeat; background-position-y: center; display: block; float: right; }
+#footerwrap a.icon.github     { background-image: url("../svg/github.svg"); }
+#footerwrap a.icon.unity    { background-image: url("../svg/unity.svg"); }
+#footerwrap a.icon.nomand    { background-image: url("../svg/nomand.svg"); }
+#footerwrap a.icon.twitter    { background-image: url("../svg/twitter.svg"); }
+
+h1, h2, h3, h4, h5 { font-family: 'Open_Sans_Bold', sans-serif; font-weight: 500; line-height: 100%; margin: 0px; }
+
+hr { border-top: 10px dotted #ffffff; border-width: 4px 0px 0px 0px; max-width: 10px; }
+h1 { font-size: 40px; line-height: 50px; font-weight: 700; letter-spacing: 2px; }
+h2 { font-size: 30px; line-height: 40px; font-weight: 700; letter-spacing: 2px; }
+h3 { font-size: 20px; line-height: 30px; font-weight: 700; letter-spacing: 2px; }
+
+/* special */
+.cover { background-position: center center; -webkit-background-size: cover, cover; -moz-background-size: cover, cover; background-size: cover, cover; -o-background-size: cover, cover; background-repeat: no-repeat, no-repeat;}
+.round { -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px; }
+
+/* animation */
+@keyframes sprite { 100%{ background-position: -12672px; }}
+
+@keyframes fadeIn{ 0% { opacity:0; } 100% { opacity:1; } }
+@-moz-keyframes fadeIn{ 0% { opacity:0; } 100% { opacity:1; } }
+@-webkit-keyframes fadeIn{ 0% { opacity:0; } 100% { opacity:1; } }
+@-o-keyframes fadeIn{ 0% { opacity:0; } 100% { opacity:1; } }
+@-ms-keyframes fadeIn{ 0% { opacity:0; } 100% { opacity:1; } }
+
+.fadeIn { animation: fadeIn ease 250ms; -webkit-animation: fadeIn ease 250ms; -moz-animation: fadeIn ease 250ms; -o-animation: fadeIn ease 250ms; -ms-animation: fadeIn ease 250ms; }
+
+/* widths */
+@media only screen and (max-width: 1440px)
+{
+  #sidebar { width: 100%; }
+  #content #presentation { margin-left: 0px; margin-right: 0px; transition: all 100ms;  }
+  #content a.card { flex: 1 0 250px; transition: all 250ms; }
+}
